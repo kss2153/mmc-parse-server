@@ -16,9 +16,7 @@
     version: '1.0.0',
  
     /**
-     * Initialize the Mailgun module with the proper credentials.
-     * @param {String} domainName Your Mailgun domain name
-     * @param {String} apiKey Your Mailgun api key
+     * Initialize the Twilio module.
      */
     initialize: function() {
       return this;
@@ -34,13 +32,8 @@
           'Authorization': 'Basic QUM5NzM0ZDNhMWE3ZGM3NDcyZDI5ZjNlMjQ5YTllNjdhZjo0ZmFjOWYxNDI2YzZjZDk4Mjk2N2IwMzJmZTIwMjNlYw0K',
           'Host': 'api.twilio.com',
           'Content-Type': 'application/x-www-form-urlencoded'
-          //'Content-Length': '50'
         },
-        body: params,//{
-          //To: '+14802764613',
-          //From: '+15208660313',
-          //Body: 'Hello Hello'
-        //}
+        body: params,
       }).then(function(httpResponse) {
         console.log(httpResponse.text);
       }, function(httpResponse) {
